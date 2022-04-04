@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="PEstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadP()">
+    <div class="container">
+        <div class="header">
+            <a href="profile.html">
+                <div class="tLeft"></div>
+            </a>
+        </div>
+        <div class="SrcBlock">
+            <form action="profile.html" id="ChangeP" enctype="multipart/form-data">
+                <div class="Ijb">
+                  <label for="file">+</label>
+                   <input accept="image/jpeg,image/png" id="file" type="file" name="photo">
+                   <script>
+                       
+function handleFileSelect(evt) {
+    var file = evt.target.files; // FileList object
+    var f = file[0];
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+        alert("Image only please....");
+    }
+    var reader = new FileReader();
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+        return function(e) {
+            // Render thumbnail.
+            $('.Ijb').css('backgroundImage', 'url('+e.target.result+')')
+        };
+    })(f);
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
+}
+document.getElementById('file').addEventListener('change', handleFileSelect, false);
+</script>
+                    <input name="name" type="text" id="myname" value="Name">
+                    <div class="classes">
+                        <select class="class" name="cl1" id="clr1" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                        <select class="class" name="cl2" id="clr2" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                        <select class="class" name="cl3" id="clr3" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea name="desc" id="description" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti provident, quas aliquam! Pariatur rem beatae soluta est adipisci ex impedit, natus optio aut maiores culpa dolores, harum labore.</textarea>
+                <button type="submit" id="saveCh" onclick="editP()">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>

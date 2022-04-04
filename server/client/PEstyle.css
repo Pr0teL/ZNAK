@@ -1,0 +1,131 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    padding-top: 10px;
+    width: 320px;
+    margin: 0 auto;
+}
+.lupa{
+    float: right;
+}
+.header{
+    margin-bottom: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.header #pen img{
+    height: 41px;
+    width: 41px;
+}
+.SrcBlock{
+    width: 320px;
+    height: 100%;
+    background: #D2D2D2;
+    border-radius: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.Ijb{
+    width: 282px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-image: url(p.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    padding-top: 200px;
+    padding-bottom: 20px;
+}
+.classes{
+    display: flex;
+    justify-content: space-around;
+}
+.classes .class{
+    width: 69px;
+    height: 21px;
+    text-align: center;
+    font-size: 14px;
+    background: #E59BFF;
+    border-radius: 45px;
+    opacity: 80%;
+}
+.classes .class:last-child{
+    background: #74B4FF;
+}
+.classes .class:first-child{
+    background: #9BFFC9;
+}
+#description{
+    background: #FFF;
+    width: 262px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.slider{
+    display: flex;
+    justify-content:space-between;
+}
+.tLeft{
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-right: 40px solid #8C35FB;
+    border-bottom: 21px solid transparent;
+}
+.tRight{
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-left: 40px solid #8C35FB;
+    border-bottom: 21px solid transparent;
+}
+.toProfile{
+    width: 42px;
+    height: 42px;
+    background-image: url(p.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px #8C35FB;
+}
+.Ijb label{
+    font-size: 100px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+.Ijb #file{
+    display: none;
+}
+.Ijb input{
+    background: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 100px
+}
+.SrcBlock textarea{
+    display: block;
+    height: 15vh;
+}
+#myname{
+    color: #FFF;
+    font-size: 30px;
+    margin-left: 1.8vh;
+    width: 88%;
+}
+#saveCh{
+    width: 262px;
+    height: 30px;
+    font-size: 17px;
+    display: block;
+    margin: 10px auto;
+    background: #8C35FB;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+}
+
