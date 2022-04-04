@@ -19,13 +19,13 @@ body{
     height: 41px;
     width: 41px;
 }
-.sat img{
+.mod_btn img{
     width: 41px;
     height: 41px;
 }
 .SrcBlock{
     width: 320px;
-    height: 100%;
+    height: 75vh;
     background: #D2D2D2;
     border-radius: 10px;
     padding-top: 20px;
@@ -65,6 +65,7 @@ body{
 #description{
     background: #FFF;
     width: 262px;
+    height: 15vh;
     margin: 0 auto;
     border-radius: 10px;
     padding: 10px;
@@ -73,6 +74,8 @@ body{
 .slider{
     display: flex;
     justify-content:space-between;
+    margin-top: 5vh;
+    
 }
 .tLeft{
     width: 0;
@@ -133,3 +136,51 @@ body{
     border-radius: 5px;
 }
 
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#modal_cont {
+    z-index: 1;
+    background: #fff;
+    width: 100%;
+    height: 67.5%;
+    text-align: center;
+    padding-top: 70%;
+
+}
+#modal_cont p {
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.close {
+    width: 262px;
+    height: 30px;
+    font-size: 23px;
+    display: block;
+    margin: 90% auto;
+    background: #8C35FB;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    
+    
+}
+.classes_s {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.class_s {
+    width: 100px;
+}

@@ -94,6 +94,20 @@ app.post('/login', urlencodedParser, function (req, res) {
     });
 });
 
+app.post('/se', function (req, res) {
+    dbConn.query('UPDATE reg SET cl1s = "' + req.body.cl1s + '", cl2s = "' + req.body.cl2s + '", cl3s = "' + req.body.cl3s + '" WHERE clientkey = "' + req.cookies.sessia + '"');
+    dbConn.query('SELECT name, mail, descript, cl1, cl2, cl3, imgkey FROM `reg` WHERE cl1 = "' + req.body.cl1s + '" OR cl2 = "' + req.body.cl2s + '" OR cl3 = "' + req.body.cl3s + '"', function (error, results, fields) {
+        if (error) throw error;
+        return res.send({
+            error: false,
+            data: results,
+            message: 'search'
+        });
+    });
+
+    console.log(req.body);
+});
+
 app.post('/getcookie', urlencodedParser, function (req, res) {
     //    res.setHeader('Set-cookie','abob=15553535' );
     //     res.cookie('aboba', Math.random().toString(36).substr(2, 9));
@@ -104,7 +118,7 @@ app.post('/getcookie', urlencodedParser, function (req, res) {
 
 app.get('/user', function (req, res) {
     console.log(req.cookies.sessia);
-    dbConn.query('SELECT name, mail, descript, cl1, cl2, cl3, imgkey FROM `reg` WHERE clientkey = "' + req.cookies.sessia + '"', function (error, results, fields) {
+    dbConn.query('SELECT name, mail, descript, cl1, cl2, cl3, cl1s, cl2s, cl3s, imgkey FROM `reg` WHERE clientkey = "' + req.cookies.sessia + '"', function (error, results, fields) {
         if (error) throw error;
         return res.send({
             error: false,
@@ -114,17 +128,7 @@ app.get('/user', function (req, res) {
     });
 });
 
-app.get('/search', function (req, res) {
-    console.log(req.cookies.sessia);
-    dbConn.query('SELECT name, mail, descript, cl1, cl2, cl3, imgkey FROM `reg` WHERE clientkey = "' + req.cookies.sessia + '"', function (error, results, fields) {
-        if (error) throw error;
-        return res.send({
-            error: false,
-            data: results,
-            message: 'user'
-        });
-    });
-});
+
 //app.post("/upload", function (req, res, next) {
 //   
 //    let filedata = req.file;

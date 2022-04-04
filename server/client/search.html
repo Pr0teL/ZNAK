@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body onload="loadP()">
+<body onload="loadS()">
 
 <div class="container">
 <div class="header">
@@ -25,11 +25,13 @@ span{height:40px; width:40px; display:block; position:relative;}
 <a href="profile.html">
     <span class="toProfile"></span>
     </a>
-<a class="sat" href=""><img src="s.png" alt=""></a>
+
+<div onclick="mod();" class="mod_btn"><img src="s.png" alt=""></div>
 
 </div>
 <div class="SrcBlock">
     <div class="Ijb">
+    <div id="myname">Name</div>
     <div class="classes">
         <div class="class" id="cl1">...</div>
         <div class="class" id="cl2">...</div>
@@ -40,10 +42,48 @@ span{height:40px; width:40px; display:block; position:relative;}
     </div>
 </div>
 <div class="slider">
-    <div class="tLeft"></div>
-    <div class="tRight"></div>
+    <div class="tLeft" onclick="loadS()"></div>
+    <div class="tRight" onclick="loadS()"></div>
 </div>
+<div id="modal">
+     <div id="modal_cont">
+         <p>Укажите параметры для поиска ;)</p>
+         <form action="search.html" id="ChangeS" enctype="multipart/form-data">
+         <div class="classes_s">
+                        <select class="class_s" name="cl1s" id="clr1s" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                        <select class="class_s" name="cl2s" id="clr2s" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                        <select class="class_s" name="cl3s" id="clr3s" class="form-select">
+                            <option selected>Select</option>
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>JS</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>Ruby</option>
+                        </select>
+                    </div>
+         <div type="submit" class="close" onclick="editS()">Save</div>
+         </form>
+     </div>
+ </div>
 </div>
+
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
