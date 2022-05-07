@@ -45,17 +45,19 @@ body{
     justify-content: space-around;
 }
 .classes .class{
+    color: #fff;
     width: 69px;
-    height: 21px;
+    height: 19px;
     text-align: center;
     font-size: 14px;
     background: #8C35FB;
-    border-radius: 45px;
+    border-radius: 5px;
     opacity: 80%;
 }
 
 #description{
-    background: #FFF;
+    color: #FFF;
+    background: #202020;
     width: 262px;
     margin: 0 auto;
     border-radius: 10px;
