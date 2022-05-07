@@ -32,7 +32,7 @@
 function submReg() {
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:3001/reg",
+        url: "http://warm-taiga-78399.herokuapp.com/reg",
         crossDomain: true,
         success: function (data) {
             console.log(data.data);
@@ -61,7 +61,7 @@ function sabma() {
     var data = $('#formR').serialize();
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:3001/reg",
+        url: "http://warm-taiga-78399.herokuapp.com/reg",
         data: data,
     });
 };
@@ -73,7 +73,7 @@ function editP() {
         type: "POST",
         processData: false,
         contentType: false,
-        url: "http://127.0.0.1:3001/edit",
+        url: "http://warm-taiga-78399.herokuapp.com/edit",
         data: formdat,
     });
 };
@@ -88,7 +88,7 @@ function editS() {
     var data = $('#ChangeS').serialize();
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:3001/se",
+        url: "http://warm-taiga-78399.herokuapp.com/se",
         data: data,
     }).then(function(res){
         var i = randomInteger(0, res.data.length -1);
@@ -156,7 +156,7 @@ function valog(){
 };
 
 function loadP() {
-    fetch('http://127.0.0.1:3001/user', {
+    fetch('http://warm-taiga-78399.herokuapp.com/user', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -186,7 +186,7 @@ if (data.data[0].imgkey != ""){
 };
 
 function loadS() {
-    fetch('http://127.0.0.1:3001/user', {
+    fetch('http://warm-taiga-78399.herokuapp.com/user', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
