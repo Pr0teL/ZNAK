@@ -112,7 +112,7 @@ function editS() {
 function log() {
     var UserIn;
     var data = $('#formL').serialize();
-    fetch('http://localhost/login', {
+    fetch('http://warm-taiga-78399.herokuapp.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
