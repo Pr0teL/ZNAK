@@ -26,6 +26,7 @@ body{
     flex-direction: column;
 }
 .EntInput input{
+    color: #fff;
     width: 256px;
     height: 50px;
     margin-bottom: 20px;
@@ -50,6 +51,7 @@ body{
 }
 
 .toReg{
+    color: #fff;
     font-size: 18px;
     text-align: center;
 }
