@@ -112,7 +112,7 @@ function editS() {
 function log() {
     var UserIn;
     var data = $('#formL').serialize();
-    fetch('http://127.0.0.1:3001/login', {
+    fetch('http://localhost/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
