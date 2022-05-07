@@ -41,7 +41,7 @@ app.get('/', function (req, res) {
 });
 
 // set port
-app.listen(3001, function () {
+app.listen(process.env.PORT || 3001, function () {
     console.log('Node app is running on port 3001');
 });
 module.exports = app;
