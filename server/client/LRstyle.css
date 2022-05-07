@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background: #202020;
 }
 #logo{
     width: 100px;
@@ -28,7 +29,7 @@ body{
     width: 256px;
     height: 50px;
     margin-bottom: 20px;
-    background: #E8E8E8;
+    background: #333;
     border: 0px;
     font-size: 18px;
     

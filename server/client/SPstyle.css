@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background: #202020;
 }
 .container{
     padding-top: 10px;
@@ -26,7 +27,7 @@ body{
 .SrcBlock{
     width: 320px;
     height: 75vh;
-    background: #D2D2D2;
+    background: #333;
     border-radius: 10px;
     padding-top: 20px;
     margin-bottom: 10px;
@@ -43,6 +44,7 @@ body{
     padding-top: 400px;
     padding-bottom: 20px;
 }
+
 .classes{
     display: flex;
     justify-content: space-around;
@@ -52,18 +54,13 @@ body{
     height: 21px;
     text-align: center;
     font-size: 14px;
-    background: #E59BFF;
+    background: #8C35FB;
     border-radius: 45px;
     opacity: 80%;
 }
-.classes .class:last-child{
-    background: #74B4FF;
-}
-.classes .class:first-child{
-    background: #9BFFC9;
-}
+
 #description{
-    background: #FFF;
+    background: #808080;
     width: 262px;
     height: 15vh;
     margin: 0 auto;
