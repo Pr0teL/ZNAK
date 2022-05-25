@@ -156,7 +156,6 @@ function valog(){
 };
 
 function loadP() {
-    window.scrollTo(0,1);
     fetch('http://warm-taiga-78399.herokuapp.com/user', {
         method: 'GET',
         headers: {
@@ -222,5 +221,9 @@ function mod() {
 function close_m() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
+}
+
+function slideS(){
+    $(".SrcBlock").css
 }
 
