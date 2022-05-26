@@ -185,7 +185,9 @@ if (data.data[0].imgkey != ""){
     });
 };
 
-function loadS() {
+var rotateDeg = 0;
+
+function loadS(a) {
     fetch('http://warm-taiga-78399.herokuapp.com/user', {
         method: 'GET',
         headers: {
@@ -202,8 +204,15 @@ function loadS() {
  $('#clr3s').val(data.data[0].cl3s);
  editS();
     });
+    rotateDeg+=Number(a);
+ $('.trSlider').css({'transform': 'rotateY('+rotateDeg+'deg)'});
+ console.log(rotateDeg);
 };
-
+function RotateSL(){
+    rotateDeg+=120;
+ $('.trSlider').css({'transform': 'rotateY('+rotateDeg+'deg)'});
+ console.log(rotateDeg);
+};
 
 function getCookie(name) {
   var value = "; " + document.cookie;

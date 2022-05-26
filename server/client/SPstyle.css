@@ -6,6 +6,7 @@ body{
     padding-top: 10px;
     width: 320px;
     margin: 0 auto;
+    perspective: 5000px;
 }
 .lupa{
     float: right;
@@ -32,6 +33,7 @@ body{
     padding-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 5px;
+    position: absolute;
     box-shadow: -2px -2px 10px 1px #4BC ,2px 2px 1px 1px #8C35FB ;
     animation: background 3s infinite ;
 }
@@ -90,22 +92,23 @@ body{
 .slider{
     display: flex;
     justify-content:space-between;
-    margin-top: 5vh;
-    
+    margin-top: 300px;
+    position: relative;
+    opacity: 0.7;
 }
 .tLeft{
     width: 0;
     height: 0;
-    border-top: 21px solid transparent;
-    border-right: 40px solid #8C35FB;
-    border-bottom: 21px solid transparent;
+    border-top: 13px solid transparent;
+    border-right: 27px solid #8C35FB;
+    border-bottom: 13px solid transparent;
 }
 .tRight{
     width: 0;
     height: 0;
-    border-top: 21px solid transparent;
-    border-left: 40px solid #8C35FB;
-    border-bottom: 21px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 27px solid #8C35FB;
+    border-bottom: 13px solid transparent;
 }
 .toProfile{
     width: 42px;
@@ -199,4 +202,48 @@ body{
 }
 .class_s {
     width: 100px;
+}
+
+/*
+.container {
+    position: relative;
+    background: black;
+    margin: 200px auto;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+}
+*/
+.trSlider {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    transform: translateZ();
+    -webkit-transition: 1s ease;
+}
+/*
+.trSlider:hover{
+    transform: rotateY(120deg);
+}
+*/
+
+.side {
+    border: 3px solid white;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    font: normal 70px Arial;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+}
+.front {
+    transform: translateZ(92px);
+}
+.left {
+    transform: rotateY(120deg) translateZ(92px)
+        translateX(0px);
+}
+.right {
+    transform: rotateY(-120deg) translateZ(92px) translateX(0px);
 }

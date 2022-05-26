@@ -1,4 +1,6 @@
-function loadS() {
+var rDeg = 0;
+function loadS(a) {
+    console.log(a);
     fetch('http://warm-taiga-78399.herokuapp.com/user', {
         method: 'GET',
         headers: {
@@ -15,8 +17,32 @@ function loadS() {
  $('#clr3s').val(data.data[0].cl3s);
  editS();
     });
+    rDeg = rDeg + 120;
+ $('.trSlider').css({'transform': 'rotateY('+rDeg+'deg)'});
+ console.log(rDeg);
 };
-
+function loadSR(a) {
+    console.log(a);
+    fetch('http://warm-taiga-78399.herokuapp.com/user', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        redirect: 'follow',
+        credentials: 'include', // Don't forget to specify this if you need cookies 
+    }).then(function(res){
+        return res.json();
+    }).then(function(data){
+        console.log(data.data[0]);
+ $('#clr1s').val(data.data[0].cl1s);
+ $('#clr2s').val(data.data[0].cl2s);
+ $('#clr3s').val(data.data[0].cl3s);
+ editS();
+    });
+    rDeg = rDeg - 120;
+ $('.trSlider').css({'transform': 'rotateY('+rDeg+'deg)'});
+ console.log(rDeg);
+};
 // Вешаем на прикосновение функцию handleTouchStart
 document.addEventListener('touchstart', handleTouchStart, false);  
 // А на движение пальцем по экрану - handleTouchMove      
@@ -44,10 +70,10 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* left swipe */ 
-            loadS();
+            loadSR(120);
         } else {
             /* right swipe */
-            loadS();
+            loadS(-120);
         }                       
     } else { // Это вам, в общем-то, не надо, вы ведь только влево-вправо собираетесь двигать
         if ( yDiff > 0 ) {
