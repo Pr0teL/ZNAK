@@ -94,7 +94,7 @@ function editS() {
         var i = randomInteger(0, res.data.length -1);
         console.log(res.data);
         console.log(i);
-       $('.descript').html(res.data[i].descript);
+       $('.descr').html(res.data[i].descript);
         $('.myname').html(res.data[i].name);
         $('.c1').html(res.data[i].cl1);
         $('.c2').html(res.data[i].cl2);
