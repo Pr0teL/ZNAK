@@ -95,7 +95,7 @@ function editS() {
         console.log(res.data);
         console.log(i);
        $('#description').html(res.data[i].descript);
-        $('#myname').html(res.data[i].name);
+        $('.myname').html(res.data[i].name);
         $('#cl1').html(res.data[i].cl1);
         $('#cl2').html(res.data[i].cl2);
         $('#cl3').html(res.data[i].cl3);
