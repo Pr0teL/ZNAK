@@ -95,6 +95,7 @@ body{
     margin-top: 300px;
     position: relative;
     opacity: 0.7;
+    z-index: 2;
 }
 .tLeft{
     width: 0;
@@ -162,24 +163,27 @@ body{
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 45%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+    border-radius: 10px;
 
 }
 
 #modal_cont {
-    z-index: 1;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 69.1%;
+    height: 43.1%;
     text-align: center;
-    padding-top: 270px;
+    padding-top: 20px;
 
 }
 #modal_cont p {
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 0px;
+    color: #fff;
 }
 
 .close {
@@ -187,7 +191,7 @@ body{
     height: 30px;
     font-size: 23px;
     display: block;
-    margin: 450px auto;
+    margin: 40px auto;
     background: #8C35FB;
     color: #fff;
     border: 0;
@@ -196,12 +200,13 @@ body{
     
 }
 .classes_s {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
 }
 .class_s {
     width: 100px;
+    border-radius: 15px;
 }
 
 /*
