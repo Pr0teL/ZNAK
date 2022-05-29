@@ -94,11 +94,11 @@ function editS() {
         var i = randomInteger(0, res.data.length -1);
         console.log(res.data);
         console.log(i);
-       $('#description').html(res.data[i].descript);
+       $('.descript').html(res.data[i].descript);
         $('.myname').html(res.data[i].name);
-        $('#cl1').html(res.data[i].cl1);
-        $('#cl2').html(res.data[i].cl2);
-        $('#cl3').html(res.data[i].cl3);
+        $('.c1').html(res.data[i].cl1);
+        $('.c2').html(res.data[i].cl2);
+        $('.c3').html(res.data[i].cl3);
         if (res.data[i].imgkey != ""){
  $('.Ijb').css('backgroundImage', 'url(uploads/'+res.data[i].imgkey+')');
         };

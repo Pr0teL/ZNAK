@@ -137,7 +137,7 @@ body{
     display: block;
     height: 15vh;
 }
-.myname{
+#myname{
     color: #FFF;
     font-size: 30px;
     margin-left: 1.8vh;
