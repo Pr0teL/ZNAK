@@ -168,8 +168,8 @@ function loadP() {
     }).then(function(data){
         console.log(data.data[0]);
  $('#description').html(data.data[0].descript);
- $('#myname').html(data.data[0].name);
- $('#myname').val(data.data[0].name);
+ $('.myname').html(data.data[0].name);
+ $('.myname').val(data.data[0].name);
  $('#cl1').html(data.data[0].cl1);
  $('#cl2').html(data.data[0].cl2);
  $('#cl3').html(data.data[0].cl3);
