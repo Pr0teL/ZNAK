@@ -254,3 +254,44 @@ body{
 .right {
     transform: rotateY(-120deg) translateZ(92px) translateX(0px);
 }
+
+.usersbl{
+    height: 560px;
+    width: 282px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: #202020;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+.userG{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.avatarG{
+    margin-top: 5px;
+    width: 37px;
+    height: 37px;
+    background-image: url(p.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+}
+.nameG{
+    margin-top: 15px;
+}
+.sendm{
+    margin-top: 15px;
+}
+.sendm a{
+    color: #fff;
+    text-decoration: none;
+}
